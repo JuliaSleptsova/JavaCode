@@ -1,8 +1,5 @@
 public class LinearSearch {
-    public static void main(String[] args){
-        int index = linSearch(new int[]{1, 45, 23, 4, 89, 8}, 4);
-        print(index, 4);
-    }
+
     public static int linSearch(int arr[], int elementKey){
         for (int index = 0; index < arr.length; index++){
             if (arr[index] == elementKey)
