@@ -1,5 +1,5 @@
 public class min3numbers {
-    public static int min(int a, int b, int c) {
+    public static int min1(int a, int b, int c) {
 
         int min;
         if (a > b){
@@ -16,6 +16,21 @@ public class min3numbers {
             }
             else {
                 min  = a;
+            }
+        }
+        return min;
+    }
+    public static int min(int a, int b, int c){
+        int min;
+        if ( a < b && a < c){
+            min = a;
+        }
+        else {
+            if (c < b) {
+                min = c;
+            }
+            else {
+                min = b;
             }
         }
         return min;
