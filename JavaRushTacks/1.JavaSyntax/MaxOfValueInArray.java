@@ -2,7 +2,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class MaxValueOfArray {
+public class MaxOfValueInArray {
     public static void main(String[] args) throws Exception {
         int[] array = initializeArray();
         int max = max(array);
