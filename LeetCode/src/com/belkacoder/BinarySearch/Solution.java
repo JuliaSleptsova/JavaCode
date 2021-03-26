@@ -20,4 +20,15 @@ public class Solution {
         }
         return -1;
     }
+
+    public static int mySqrt(int x) {
+        int mid, left = 0, right = x;
+        while (left <= right) {
+            mid = left + (right - left) / 2;
+            if (right - left == 1) return left;
+            if (mid * mid > x) right = mid;
+            else left = mid ;
+        }
+        return -1;
+    }
 }
