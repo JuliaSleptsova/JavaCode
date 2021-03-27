@@ -61,4 +61,5 @@ public class SolutionTest {
         int expected = 1;
         Assert.assertEquals(expected, result);
     }
+
 }

@@ -22,13 +22,26 @@ public class Solution {
     }
 
     public static int mySqrt(int x) {
-        int mid, left = 0, right = x;
+        long left = 1, right = x / 2;
+        while (left <= right) {
+            long mid = left + (right - left) / 2;
+            if (mid * mid == x) return (int)mid;
+            if (mid * mid > x) right = mid - 1;
+            else left = mid + 1;
+        }
+        if (left * left == x) return (int) left;
+        return (int)right;
+    }
+
+    public static int guessNumber(int n) {
+        int mid, left = 0, right = n;
         while (left <= right) {
             mid = left + (right - left) / 2;
-            if (right - left == 1) return left;
-            if (mid * mid > x) right = mid;
-            else left = mid ;
+            if (mid == n) return mid;
+            if (n < mid) right = mid - 1;
+            else left = mid + 1;
         }
         return -1;
     }
+
 }
